@@ -6,12 +6,11 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:37:52 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/11/04 04:31:49 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/11/12 20:39:58 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-#include "../includes/libft.h"
+#include "ft_printf.h"
 
 int	print_p(va_list *args, t_info *inf, const char *base)
 {

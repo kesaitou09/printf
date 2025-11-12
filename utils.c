@@ -6,12 +6,11 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:39:01 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/10/29 17:01:07 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/11/12 20:39:58 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/ft_printf.h"
-#include "../includes/libft.h"
+#include "ft_printf.h"
 
 int	put_nspace(t_info *inf, size_t n)
 {
