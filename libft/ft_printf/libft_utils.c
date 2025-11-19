@@ -6,17 +6,18 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:38:38 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/11/19 08:32:37 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/11/16 05:53:32 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
+#include "../includes/libft.h"
 
 int	ft_putchar(char c, t_info *inf)
 {
 	if (write(1, &c, 1) == ERROR)
 		return (ERROR);
-	inf->_len += 1;
+	inf->total_len += 1;
 	return (SUCCESS);
 }
 
@@ -32,16 +33,9 @@ int	ft_putstr(char *str, t_info *inf)
 
 int	ft_strcmp(const char *s1, const char *s2)
 {
-	int	i;
-
-	i = 0;
-	while (s1[i] || s2[i])
-	{
-		if (s1[i] != s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-		i++;
-	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	if (ft_strlen(s1) > ft_strlen(s2))
+		return (ft_strncmp(s1, s2, ft_strlen(s1)));
+	return (ft_strncmp(s1, s2, ft_strlen(s2)));
 }
 
 int	is_flag(char c)

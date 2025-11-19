@@ -6,11 +6,12 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:38:54 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/11/19 09:00:09 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/11/16 05:53:43 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
+#include "../includes/libft.h"
 
 int	print_u(t_info *inf, va_list *args)
 {

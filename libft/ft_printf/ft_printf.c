@@ -6,12 +6,12 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:38:36 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/11/19 08:59:34 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:00:31 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
-#include "libft/includes/libft.h"
+#include "../includes/ft_printf.h"
+#include "../includes/libft.h"
 
 void	init_info(t_info *inf)
 {
@@ -60,11 +60,11 @@ int	ft_printf(const char *format, ...)
 	va_list	args;
 	t_info	inf;
 
-	inf._len = 0;
+	inf.total_len = 0;
 	va_start(args, format);
 	init_info(&inf);
 	if (parse(&format, &inf, &args) == ERROR)
 		return (va_end(args), ERROR);
 	va_end(args);
-	return (inf._len);
+	return (inf.total_len);
 }

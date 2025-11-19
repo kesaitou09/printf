@@ -6,11 +6,12 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:38:42 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/11/19 09:00:19 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/10/29 17:01:15 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "../includes/ft_printf.h"
+#include "../includes/libft.h"
 
 char	*utoa_hub(va_list *args, const char *base)
 {

@@ -6,14 +6,13 @@
 /*   By: kesaitou <kesaitou@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 02:47:32 by kesaitou          #+#    #+#             */
-/*   Updated: 2025/11/19 08:59:50 by kesaitou         ###   ########.fr       */
+/*   Updated: 2025/10/18 20:45:59 by kesaitou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-#include "libft/includes/libft.h"
 # include <stdarg.h>
 # include <stdint.h>
 # include <stdlib.h>
@@ -28,7 +27,7 @@ typedef struct s_info
 	size_t			width;
 	int				precision;
 	char			specifier;
-	int				_len;
+	int				total_len;
 }					t_info;
 
 typedef enum e_flag
@@ -85,5 +84,6 @@ int					ft_putchar(char c, t_info *inf);
 int					ft_putstr(char *str, t_info *inf);
 int					is_flag(char c);
 int					ft_atoi_alpha(const char **nptr);
+int					ft_strcmp(const char *s1, const char *s2);
 
 #endif
